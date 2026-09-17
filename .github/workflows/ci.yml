@@ -24,10 +24,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install Bun
-        uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6 # v2.2.0
+      - name: Install CI toolchain
+        uses: Skrates/agent-affordances/toolchain@5613475f9d2d50d23b97e32669858f7f24a727d1
         with:
-          bun-version: 1.3.14
+          tools: bun
 
       - name: Test and type-check aggregator
         working-directory: aggregator
